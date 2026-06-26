@@ -1,0 +1,2373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Go Real Estate License | Florida Real Estate License Roadmap</title>
+  <meta name="description" content="Florida real estate licensing explained clearly: online licensing course options, DBPR application, fingerprints, state exam, Aceable Agent course path, FastPass exam prep, post-licensing, and continuing education." />
+  <link rel="canonical" href="https://gorealestatelicense.com/" />
+  <meta property="og:title" content="Go Real Estate License | Florida Real Estate License Roadmap" />
+  <meta property="og:description" content="Florida real estate licensing explained clearly: course, DBPR application, fingerprints, state exam, FastPass exam prep, post-licensing, and CE." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gorealestatelicense.com/" />
+
+  <style>
+    /*
+      GO REAL ESTATE LICENSE — SINGLE PAGE BUILD
+      Replace placeholder links below:
+      - http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378
+      - /fastpass
+      - https://www.myfloridalicense.com/CheckListDetail.asp?SID=&XACT_DEFN_ID=744&clientCode=2501&xactCode=1010
+      - https://www.pearsonvue.com/us/en/fl/realestate.html
+      - http://go.aceableagent.com/aff_c?offer_id=519&aff_id=12378
+      - http://go.aceableagent.com/aff_c?offer_id=66&aff_id=12378
+
+      Designed for: standalone static deployment on Vercel.
+    */
+
+    :root {
+      --bg: #f8f7f3;
+      --surface: #ffffff;
+      --surface-soft: #fbfcfc;
+      --ink: #1f2d36;
+      --muted: #5c6b73;
+      --border: #dde6ea;
+      --accent: #1297a6;
+      --accent-dark: #0a6f78;
+      --accent-soft: #eaf6f8;
+      --cta: #de2f6b;
+      --cta-dark: #bd2258;
+      --warm: #f5efe7;
+      --warm-dark: #7c5a35;
+      --danger-soft: #fff4ed;
+      --shadow: 0 18px 50px rgba(31, 45, 54, 0.08);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 1180px;
+      --header-h: 78px;
+      --font-head: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img,
+    svg {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 18px;
+      z-index: 1000;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--ink);
+      color: #fff;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 18px;
+    }
+
+    .container {
+      width: min(calc(100% - 36px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      min-height: var(--header-h);
+      border-bottom: 1px solid rgba(218, 220, 224, 0.8);
+      background: rgba(247, 246, 242, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      min-height: var(--header-h);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #23c1cf);
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      box-shadow: 0 8px 18px rgba(18, 151, 166, 0.22);
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      font-weight: 650;
+    }
+
+    .nav a {
+      padding: 10px 12px;
+      border-radius: 999px;
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      background: rgba(47, 93, 80, 0.08);
+      color: var(--accent-dark);
+      outline: none;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-width: max-content;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: var(--cta);
+      color: #fff;
+      font-size: 0.94rem;
+      font-weight: 800;
+      box-shadow: 0 10px 20px rgba(222, 47, 107, 0.18);
+    }
+
+    .header-cta:hover,
+    .header-cta:focus {
+      background: var(--cta-dark);
+      outline: none;
+    }
+
+    .menu-btn {
+      display: none;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .hero {
+      position: relative;
+      padding: 72px 0 34px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -180px -120px auto auto;
+      width: 520px;
+      height: 520px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(47, 93, 80, 0.14), rgba(47, 93, 80, 0) 65%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(340px, 0.62fr);
+      align-items: center;
+      gap: 52px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 12px;
+      border: 1px solid rgba(47, 93, 80, 0.18);
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 0.82rem;
+      font-weight: 850;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--cta);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: -0.055em;
+      line-height: 1.02;
+    }
+
+    h1,
+    h2 {
+      font-family: var(--font-head);
+      font-weight: 850;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(2.75rem, 6.6vw, 5.25rem);
+      max-width: 930px;
+    }
+
+    .hero-lede {
+      margin: 24px 0 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      line-height: 1.62;
+    }
+
+    .hero-actions,
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 18px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 850;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease, border 0.15s ease;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .btn-primary {
+      background: var(--cta);
+      color: #fff;
+      box-shadow: 0 14px 24px rgba(222, 47, 107, 0.2);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: var(--cta-dark);
+    }
+
+    .btn-rose {
+      background: var(--cta);
+      color: #fff;
+      box-shadow: 0 14px 24px rgba(222, 47, 107, 0.2);
+    }
+
+    .btn-rose:hover,
+    .btn-rose:focus {
+      background: var(--cta-dark);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      border-color: rgba(47, 93, 80, 0.35);
+      background: #fff;
+    }
+
+    .btn-text {
+      color: var(--accent-dark);
+      padding-inline: 0;
+      min-height: unset;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      font-weight: 850;
+    }
+
+    .disclosure-mini {
+      margin-top: 18px;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 26px;
+      border: 1px solid rgba(218, 220, 224, 0.95);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      z-index: -1;
+      border-radius: var(--radius-lg);
+      background: var(--warm);
+      transform: rotate(-3deg);
+    }
+
+    .hero-card h2 {
+      font-size: 1.6rem;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 12px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 12px;
+      border: 1px solid rgba(218, 220, 224, 0.8);
+      border-radius: 14px;
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .check {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+
+    .trust-bar {
+      padding: 22px 0 36px;
+    }
+
+    .trust-inner {
+      display: grid;
+      grid-template-columns: 1.25fr repeat(5, auto);
+      gap: 14px;
+      align-items: center;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      color: var(--muted);
+      box-shadow: 0 12px 34px rgba(32, 33, 36, 0.05);
+    }
+
+    .trust-inner strong {
+      color: var(--ink);
+    }
+
+    .trust-pill {
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      font-size: 0.84rem;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .jump-inner {
+      grid-template-columns: 1.1fr repeat(6, auto);
+    }
+
+    a.trust-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(18, 151, 166, 0.16);
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    a.trust-pill:hover,
+    a.trust-pill:focus {
+      transform: translateY(-1px);
+      background: var(--accent-soft);
+      border-color: rgba(18, 151, 166, 0.28);
+      color: var(--accent-dark);
+      outline: none;
+    }
+
+    section {
+      padding: 70px 0;
+      scroll-margin-top: calc(var(--header-h) + 22px);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 28px;
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      max-width: 780px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2.05rem, 3.7vw, 3.35rem);
+    }
+
+    .section-title p {
+      margin: 18px 0 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: 0 12px 30px rgba(32, 33, 36, 0.045);
+    }
+
+    .card:hover {
+      border-color: rgba(47, 93, 80, 0.32);
+    }
+
+    .card-icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 900;
+    }
+
+    .card-icon {
+      min-width: 44px;
+      padding: 0 8px;
+      font-size: 0.92rem;
+      white-space: nowrap;
+    }
+
+    .card h3 {
+      font-family: var(--font-body);
+      letter-spacing: -0.025em;
+      font-size: 1.22rem;
+      line-height: 1.16;
+    }
+
+    .card p {
+      margin: 12px 0 18px;
+      color: var(--muted);
+    }
+
+    .card .btn-text {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
+    .proof-list {
+      display: grid;
+      gap: 12px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .proof-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .proof-list li::before {
+      content: "✓";
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 950;
+      margin-top: 1px;
+    }
+
+    .recommendation {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--warm);
+      color: #725721;
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .product-note {
+      margin-top: 16px;
+      padding: 14px 15px;
+      border-radius: 16px;
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .value-stack {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 14px;
+      align-items: stretch;
+      margin-top: 26px;
+    }
+
+    .stack-card {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: 0 12px 30px rgba(32, 33, 36, 0.045);
+    }
+
+    .stack-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+      letter-spacing: -0.025em;
+    }
+
+    .stack-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .stack-plus {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      min-height: 44px;
+      color: var(--accent-dark);
+      font-size: 1.8rem;
+      font-weight: 900;
+    }
+
+    .coupon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px 14px;
+      border: 1px dashed rgba(47, 93, 80, 0.45);
+      border-radius: 16px;
+      background: #fff;
+      color: var(--accent-dark);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-align: center;
+    }
+
+    .coupon code {
+      padding: 4px 8px;
+      border-radius: 8px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font: inherit;
+      letter-spacing: 0.04em;
+    }
+
+    .bridge-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .bridge-card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .bridge-card h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1.55rem, 2.7vw, 2.2rem);
+      letter-spacing: -0.055em;
+    }
+
+    .numbered-list {
+      counter-reset: item;
+      display: grid;
+      gap: 12px;
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .numbered-list li {
+      counter-increment: item;
+      display: grid;
+      grid-template-columns: 32px minmax(0, 1fr);
+      gap: 12px;
+      color: var(--muted);
+      align-items: start;
+    }
+
+    .numbered-list li::before {
+      content: counter(item);
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 950;
+      font-size: 0.88rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .comparison-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .comparison-card.good {
+      border-color: rgba(47, 93, 80, 0.24);
+      background: linear-gradient(135deg, var(--accent-soft), #fff 70%);
+    }
+
+    .comparison-card h3 {
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+
+    .comparison-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .subtle-warning {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .roadmap {
+      position: relative;
+      display: grid;
+      gap: 16px;
+    }
+
+    .roadmap::before {
+      content: "";
+      position: absolute;
+      left: 29px;
+      top: 28px;
+      bottom: 28px;
+      width: 2px;
+      background: linear-gradient(var(--accent), rgba(47, 93, 80, 0.05));
+    }
+
+    .step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 60px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .step-number {
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      width: 60px;
+      height: 60px;
+      border: 1px solid rgba(47, 93, 80, 0.22);
+      border-radius: 999px;
+      background: var(--bg);
+      color: var(--accent-dark);
+      font-weight: 950;
+      box-shadow: 0 0 0 10px var(--bg);
+    }
+
+    .step-body {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .step-body h3 {
+      font-family: var(--font-body);
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+    }
+
+    .step-body p {
+      max-width: 840px;
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .step-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature-panel {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-panel.highlight {
+      background: linear-gradient(135deg, var(--accent-soft), #fff 60%);
+      border-color: rgba(47, 93, 80, 0.2);
+    }
+
+    .feature-panel h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1.55rem, 2.7vw, 2.25rem);
+      letter-spacing: -0.055em;
+    }
+
+    .feature-panel p {
+      color: var(--muted);
+    }
+
+    .definition-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .terms-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .definition {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .definition b {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .definition p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .move-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .move-card .cta-row {
+      margin-top: auto !important;
+      padding-top: 22px;
+    }
+
+    .move-card .btn {
+      width: fit-content;
+    }
+
+    .band {
+      padding: 42px;
+      border: 1px solid rgba(47, 93, 80, 0.18);
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 90% 10%, rgba(176, 138, 68, 0.12), transparent 34%),
+        linear-gradient(135deg, var(--surface), var(--accent-soft));
+      box-shadow: var(--shadow);
+    }
+
+    .band h2 {
+      font-size: clamp(1.95rem, 3.6vw, 3.05rem);
+    }
+
+    .band p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px 22px;
+      cursor: pointer;
+      font-weight: 850;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 950;
+    }
+
+    details[open] summary::after {
+      content: "–";
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 22px 22px;
+      color: var(--muted);
+      max-width: 930px;
+    }
+
+    .source-box {
+      display: grid;
+      gap: 12px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .source-box a {
+      color: var(--accent-dark);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .site-footer {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+      background: #efeee9;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.55fr);
+      gap: 30px;
+      align-items: start;
+    }
+
+    .footer-grid p {
+      color: var(--muted);
+      margin: 14px 0 0;
+      max-width: 740px;
+    }
+
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 18px;
+    }
+
+    .footer-links a {
+      color: var(--accent-dark);
+      font-weight: 750;
+    }
+
+    .fine-print {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .mobile-panel {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .value-stack,
+      .bridge-grid,
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .stack-plus {
+        width: 100%;
+        min-height: 20px;
+      }
+
+      .nav,
+      .header-cta {
+        display: none;
+      }
+
+      .menu-btn {
+        display: inline-flex;
+      }
+
+      .mobile-panel {
+        display: none;
+        padding: 0 0 18px;
+      }
+
+      .mobile-panel.is-open {
+        display: block;
+      }
+
+      .mobile-nav {
+        display: grid;
+        gap: 8px;
+        padding: 12px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        background: var(--surface);
+      }
+
+      .mobile-nav a {
+        padding: 12px;
+        border-radius: 12px;
+        color: var(--muted);
+        font-weight: 800;
+      }
+
+      .mobile-nav a:hover,
+      .mobile-nav a:focus {
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+        outline: none;
+      }
+
+      .hero-grid,
+      .split,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .trust-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-inner strong {
+        grid-column: 1 / -1;
+      }
+
+      .jump-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .jump-inner strong {
+        grid-column: 1 / -1;
+      }
+
+      .jump-inner .trust-pill {
+        width: 100%;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .definition-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .terms-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max));
+      }
+
+      .brand-text {
+        font-size: 0.92rem;
+      }
+
+      .hero-card {
+        padding: 20px;
+      }
+
+      .trust-inner,
+      .cards,
+      .definition-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .terms-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .jump-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+
+      .card,
+      .step-body,
+      .feature-panel,
+      .band {
+        padding: 20px;
+      }
+
+      .step {
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .step-number {
+        width: 46px;
+        height: 46px;
+        box-shadow: 0 0 0 8px var(--bg);
+      }
+
+      .roadmap::before {
+        left: 22px;
+      }
+
+      .hero-actions,
+      .cta-row,
+      .step-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .footer-links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* v15 aesthetic polish: more air, softer cards, clearer scan path */
+    body {
+      background:
+        radial-gradient(circle at 12% 2%, rgba(18, 151, 166, 0.10), transparent 30rem),
+        radial-gradient(circle at 88% 8%, rgba(222, 47, 107, 0.055), transparent 26rem),
+        var(--bg);
+    }
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 1px 0 rgba(31, 45, 54, 0.03);
+    }
+
+    .hero {
+      padding: 86px 0 46px;
+    }
+
+    h1 {
+      letter-spacing: -0.065em;
+    }
+
+    h2 {
+      letter-spacing: -0.06em;
+    }
+
+    .hero-lede,
+    .section-title p,
+    .band p {
+      line-height: 1.68;
+    }
+
+    .hero-card,
+    .card,
+    .step-body,
+    .feature-panel,
+    .bridge-card,
+    .definition,
+    .comparison-card,
+    details {
+      border-color: rgba(221, 230, 234, 0.92);
+      box-shadow: 0 14px 36px rgba(31, 45, 54, 0.055);
+    }
+
+    .hero-card {
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .checklist {
+      gap: 14px;
+    }
+
+    .checklist li {
+      padding: 14px;
+      background: #fff;
+    }
+
+    .trust-inner {
+      border-radius: 24px;
+      padding: 20px;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-head {
+      margin-bottom: 30px;
+    }
+
+    .cards,
+    .definition-grid,
+    .comparison,
+    .split,
+    .bridge-grid {
+      gap: 20px;
+    }
+
+    .card,
+    .definition,
+    .comparison-card,
+    .step-body,
+    .feature-panel,
+    .bridge-card {
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .card:hover,
+    .definition:hover,
+    .comparison-card:hover,
+    .feature-panel:hover,
+    .bridge-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 44px rgba(31, 45, 54, 0.075);
+    }
+
+    .band {
+      padding: 46px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(18, 151, 166, 0.10), transparent 34%),
+        linear-gradient(135deg, #fff, var(--accent-soft));
+    }
+
+    .value-stack {
+      gap: 16px;
+    }
+
+    .coupon {
+      display: inline-flex;
+      white-space: nowrap;
+      padding: 10px 12px;
+      background: var(--accent-soft);
+      border-color: rgba(18, 151, 166, 0.24);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 56px 0 32px; }
+      section { padding: 54px 0; }
+      .band { padding: 22px; }
+    }
+
+    /* final spacing polish: tighten official sources/disclosure card */
+    .source-box {
+      gap: 18px;
+    }
+
+    .source-box p {
+      margin: 0;
+    }
+
+
+    /* best-blend visual system: organized guide structure + Aceable-adjacent conversion skin */
+    :root {
+      --bg: #fbfaf7;
+      --surface: #ffffff;
+      --surface-soft: #f7fbfc;
+      --ink: #172832;
+      --muted: #5d707b;
+      --border: #dfe8ec;
+      --accent: #0e8d99;
+      --accent-dark: #0a6871;
+      --accent-soft: #e8f7f8;
+      --cta: #d9346f;
+      --cta-dark: #b9275a;
+      --warm: #f5efe7;
+      --shadow: 0 18px 48px rgba(23, 40, 50, 0.09);
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 8% 0%, rgba(24, 189, 200, 0.10), transparent 30rem),
+        radial-gradient(circle at 88% 8%, rgba(217, 52, 111, 0.075), transparent 28rem),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom-color: rgba(223, 232, 236, 0.92);
+      box-shadow: 0 1px 0 rgba(23, 40, 50, 0.03);
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), #18bdc8);
+      box-shadow: 0 12px 24px rgba(14, 141, 153, 0.22);
+    }
+
+    .header-cta,
+    .btn-primary {
+      background: var(--cta);
+      box-shadow: 0 16px 28px rgba(217, 52, 111, 0.23);
+    }
+
+    .header-cta:hover,
+    .header-cta:focus,
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: var(--cta-dark);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      border-color: var(--border);
+      box-shadow: 0 10px 22px rgba(23, 40, 50, 0.04);
+    }
+
+    .hero {
+      overflow: hidden;
+      padding: 86px 0 54px;
+      background:
+        radial-gradient(circle at 82% 12%, rgba(24, 189, 200, 0.18), transparent 34%),
+        radial-gradient(circle at 12% 88%, rgba(217, 52, 111, 0.10), transparent 28%),
+        linear-gradient(180deg, #fff 0%, #eef9fa 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::before {
+      display: none;
+    }
+
+    h1 {
+      color: var(--ink);
+      letter-spacing: -0.078em;
+      line-height: 0.95;
+      font-size: clamp(2.85rem, 6.7vw, 5.65rem);
+    }
+
+    h2 {
+      letter-spacing: -0.065em;
+    }
+
+    .eyebrow {
+      background: rgba(255, 255, 255, 0.82);
+      border-color: var(--border);
+      box-shadow: 0 12px 30px rgba(23, 40, 50, 0.06);
+    }
+
+    .hero-path-card {
+      overflow: hidden;
+      border-radius: 32px;
+      border-color: var(--border);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: var(--shadow);
+      padding: 30px;
+    }
+
+    .hero-path-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 8px;
+      z-index: 1;
+      border-radius: 0;
+      background: linear-gradient(90deg, var(--accent), var(--cta));
+      transform: none;
+    }
+
+    .hero-path-card h2 {
+      margin-top: 12px;
+      font-size: 1.7rem;
+    }
+
+    .hero-card-lede {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .path-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .path-item {
+      display: grid;
+      grid-template-columns: 50px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface-soft);
+    }
+
+    .path-num {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 950;
+    }
+
+    .path-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 1.02rem;
+      letter-spacing: -0.025em;
+    }
+
+    .path-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.48;
+    }
+
+    .trust-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-inner {
+      background: var(--surface);
+      box-shadow: 0 14px 34px rgba(23, 40, 50, 0.06);
+    }
+
+    .trust-pill {
+      background: var(--surface-soft);
+      border-color: rgba(14, 141, 153, 0.18) !important;
+    }
+
+    a.trust-pill:hover,
+    a.trust-pill:focus {
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    .band {
+      border-color: rgba(14, 141, 153, 0.20);
+      border-radius: 32px;
+      background:
+        radial-gradient(circle at 88% 10%, rgba(24, 189, 200, 0.12), transparent 34%),
+        linear-gradient(135deg, #fff, var(--accent-soft));
+      box-shadow: var(--shadow);
+    }
+
+    .definition,
+    .card,
+    .step-body,
+    .feature-panel,
+    .bridge-card,
+    .comparison-card,
+    details,
+    .source-box {
+      border-color: var(--border);
+      background: #fff;
+      box-shadow: 0 14px 36px rgba(23, 40, 50, 0.055);
+    }
+
+    .card-icon,
+    .check,
+    .step-number,
+    .numbered-list li::before,
+    summary::after {
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    .feature-panel.highlight,
+    .comparison-card.good {
+      background:
+        radial-gradient(circle at 92% 8%, rgba(24, 189, 200, 0.13), transparent 32%),
+        linear-gradient(135deg, var(--accent-soft), #fff 72%);
+      border-color: rgba(14, 141, 153, 0.24);
+    }
+
+    .recommendation {
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    .bridge-card .recommendation {
+      background: var(--warm);
+      color: #725721;
+    }
+
+    .value-stack .stack-card {
+      background: #fff;
+      border-color: var(--border);
+      box-shadow: 0 14px 34px rgba(23, 40, 50, 0.055);
+    }
+
+    .coupon {
+      background: var(--accent-soft);
+      border-color: rgba(14, 141, 153, 0.28);
+      color: var(--accent-dark);
+    }
+
+    #fastpass-handoff .band {
+      background:
+        radial-gradient(circle at 85% 8%, rgba(217, 52, 111, 0.11), transparent 32%),
+        linear-gradient(135deg, #fff, #eef9fa);
+    }
+
+    #post-ce .band {
+      background:
+        radial-gradient(circle at 86% 6%, rgba(24, 189, 200, 0.15), transparent 32%),
+        linear-gradient(135deg, #fff, #edf8fa);
+    }
+
+    .source-box {
+      background: #fff;
+      gap: 18px;
+    }
+
+    .source-box p {
+      margin: 0;
+    }
+
+    .source-box a,
+    .btn-text,
+    .footer-links a {
+      color: var(--accent-dark);
+    }
+
+    .site-footer {
+      background: #f1eee9;
+    }
+
+    @media (max-width: 640px) {
+      .hero-path-card {
+        padding: 22px;
+      }
+
+      .path-item {
+        grid-template-columns: 44px minmax(0, 1fr);
+      }
+
+      .path-num {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Site header">
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="#top" aria-label="Go Real Estate License home">
+            <span class="brand-mark">GO</span>
+            <span class="brand-text">
+              Go Real Estate License
+              <span>Florida licensing guide</span>
+            </span>
+          </a>
+
+          <nav class="nav" aria-label="Main navigation">
+            <a href="#start">Start Here</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#course">Course</a>
+            <a href="#exam-prep">FastPass</a>
+            <a href="#post-ce">Post &amp; CE</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+
+          <a class="header-cta" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Course Packages</a>
+
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-panel">
+            Menu
+          </button>
+        </div>
+
+        <div class="mobile-panel" id="mobile-panel">
+          <nav class="mobile-nav" aria-label="Mobile navigation">
+            <a href="#start">Start Here</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#course">Licensing Course</a>
+            <a href="#exam-prep">FastPass</a>
+            <a href="#post-ce">Post &amp; CE</a>
+            <a href="#faq">FAQ</a>
+            <a href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Course Packages</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow"><span class="dot"></span> Florida real estate licensing, explained</div>
+            <h1>Get Your Florida Real Estate License Online</h1>
+            <p class="hero-lede">
+              A plain-English Florida licensing guide that helps you compare online course packages, understand DBPR and fingerprints,
+              prepare for the state exam, and add FastPass exam prep when you want extra support.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Course Packages</a>
+              <a class="btn btn-secondary" href="#roadmap">See the Roadmap</a>
+            </div>
+
+            <p class="disclosure-mini">
+              Go Real Estate License is an Aceable Agent affiliate partner. FastPass exam prep and instructor support are provided through Daniel Larson Training.
+            </p>
+          </div>
+
+          <aside class="hero-card hero-path-card" aria-label="Recommended licensing path">
+            <h2>The recommended path</h2>
+            <p class="hero-card-lede">Use the guide first, then choose the course and exam-prep support that fits where you are today.</p>
+
+            <div class="path-list">
+              <div class="path-item">
+                <span class="path-num">1</span>
+                <div>
+                  <strong>Compare Aceable packages</strong>
+                  <p>See current Florida licensing course options, pricing, and package details on Aceable.</p>
+                </div>
+              </div>
+
+              <div class="path-item">
+                <span class="path-num">2</span>
+                <div>
+                  <strong>Add FastPass if you want support</strong>
+                  <p>Use FastPass40 for Florida-specific exam prep before the state exam.</p>
+                </div>
+              </div>
+
+              <div class="path-item">
+                <span class="path-num">3</span>
+                <div>
+                  <strong>Apply, test, activate</strong>
+                  <p>Move through DBPR, fingerprints, the state exam, and broker activation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Aceable Packages</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <div class="trust-bar">
+        <div class="container">
+          <div class="trust-inner jump-inner">
+            <strong>Find your next step.</strong>
+            <a class="trust-pill" href="#course">Licensing Course</a>
+            <a class="trust-pill" href="#application">DBPR Application</a>
+            <a class="trust-pill" href="#fingerprints">Fingerprints</a>
+            <a class="trust-pill" href="#exam-prep">FastPass</a>
+            <a class="trust-pill" href="#state-exam">State Exam</a>
+            <a class="trust-pill" href="#post-ce">Post &amp; CE</a>
+          </div>
+        </div>
+      </div>
+
+      <section id="guide-promise">
+        <div class="container">
+          <div class="band">
+            <div class="section-title">
+              <h2>Florida licensing in three moves.</h2>
+              <p>
+                Start the licensing course. Apply with DBPR. Pass the state exam.
+                Everything else fits around those three steps.
+              </p>
+            </div>
+
+            <div class="definition-grid" style="margin-top: 24px;">
+              <div class="definition move-card">
+                <b>1. Compare course packages</b>
+                <p>Review current Florida licensing course packages, pricing, and enrollment options on Aceable.</p>
+                <div class="cta-row">
+                  <a class="btn btn-primary" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Course Packages</a>
+                </div>
+              </div>
+
+              <div class="definition move-card">
+                <b>2. Apply for the license</b>
+                <p>Submit your DBPR application and complete fingerprints while you work through the course.</p>
+                <div class="cta-row">
+                  <a class="btn btn-secondary" href="#roadmap">See the Roadmap</a>
+                </div>
+              </div>
+
+              <div class="definition move-card">
+                <b>3. Pass the state exam</b>
+                <p>Add FastPass when you want Florida-specific exam prep and instructor support before exam day.</p>
+                <div class="cta-row">
+                  <a class="btn btn-secondary" href="/fastpass">View FastPass</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="start">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-title">
+              <h2>Where are you in the process?</h2>
+              <p>Choose the answer that fits you best. This is the fastest way to find the next step.</p>
+            </div>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card-icon">1</div>
+              <h3>I have not started yet.</h3>
+              <p>Start with an online Florida licensing course through Aceable Agent.</p>
+              <a class="btn-text" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare packages →</a>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">2</div>
+              <h3>I am taking or finished the course.</h3>
+              <p>Keep your application moving and add exam prep if the final or state exam starts feeling vague.</p>
+              <a class="btn-text" href="/fastpass">View FastPass →</a>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">3</div>
+              <h3>I passed the exam.</h3>
+              <p>Learn how activation works and what comes next with a Florida broker.</p>
+              <a class="btn-text" href="#after-pass">After you pass →</a>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">4</div>
+              <h3>I already have a license.</h3>
+              <p>Find out whether you need post-licensing or regular continuing education.</p>
+              <a class="btn-text" href="#post-ce">Post &amp; CE explained →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-title">
+              <h2>The Florida Real Estate License Roadmap</h2>
+              <p>Getting licensed is easier to understand when you break it into steps.</p>
+            </div>
+          </div>
+
+          <div class="roadmap">
+            <article class="step" id="course">
+              <div class="step-number">1</div>
+              <div class="step-body">
+                <h3>Start the required Florida licensing course</h3>
+                <p>
+                  Florida sales associate applicants need approved pre-license education before sitting for the state exam.
+                  In Florida, that course is 63 hours. Aceable Agent is our recommended online starting point for students who want a modern,
+                  flexible course experience.
+                </p>
+                <div class="step-actions">
+                  <a class="btn btn-primary" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Aceable Packages</a>
+                  <a class="btn btn-secondary" href="#sources">View official source</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="step" id="application">
+              <div class="step-number">2</div>
+              <div class="step-body">
+                <h3>Submit your Florida license application</h3>
+                <p>
+                  The course is not the only step. You also need to apply through the Florida Department of Business
+                  and Professional Regulation, usually called DBPR.
+                </p>
+                <div class="step-actions">
+                  <a class="btn btn-secondary" href="https://www.myfloridalicense.com/CheckListDetail.asp?SID=&XACT_DEFN_ID=744&clientCode=2501&xactCode=1010">Official DBPR application info</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="step" id="fingerprints">
+              <div class="step-number">3</div>
+              <div class="step-body">
+                <h3>Complete fingerprints and background requirements</h3>
+                <p>
+                  Florida real estate applicants generally need to complete fingerprinting/background requirements as part of the
+                  application process. Do not wait until the last minute. Processing can take time.
+                </p>
+                <div class="step-actions">
+                  <a class="btn btn-secondary" href="https://www.myfloridalicense.com/CheckListDetail.asp?SID=&XACT_DEFN_ID=744&clientCode=2501&xactCode=1010">Application checklist</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="step" id="exam-prep">
+              <div class="step-number">4</div>
+              <div class="step-body">
+                <h3>Prepare for the state exam</h3>
+                <p>
+                  The required course helps you become eligible. Exam prep helps you get ready to pass.
+                  FastPass adds Florida-specific exam prep and instructor support before the state exam.
+                </p>
+                <div class="step-actions">
+                  <a class="btn btn-primary" href="/fastpass">View FastPass</a>
+                  <a class="btn btn-secondary" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Course Packages</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="step" id="state-exam">
+              <div class="step-number">5</div>
+              <div class="step-body">
+                <h3>Schedule and pass the state exam</h3>
+                <p>
+                  After your application is approved and your course completion is valid, you can schedule the Florida real estate
+                  sales associate exam through the state’s testing vendor.
+                </p>
+                <div class="step-actions">
+                  <a class="btn btn-secondary" href="https://www.pearsonvue.com/us/en/fl/realestate.html">Pearson exam information</a>
+                  <a class="btn btn-secondary" href="/fastpass">View FastPass</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="step" id="after-pass">
+              <div class="step-number">6</div>
+              <div class="step-body">
+                <h3>Activate your license with a broker</h3>
+                <p>
+                  Passing the exam does not automatically mean you are active and ready to work. To perform licensed real estate
+                  services in Florida, your license needs to be activated with a Florida real estate broker.
+                </p>
+                <div class="step-actions">
+                  <a class="btn btn-secondary" href="#post-ce">Understand renewal education</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div class="section-title">
+              <h2>The recommended path</h2>
+              <p>
+                Compare course packages on Aceable first. Then add FastPass exam prep when you want Florida-focused review and instructor support before the state exam. Use code FastPass40 for $40 off FastPass.
+              </p>
+            </div>
+          </div>
+
+          <div class="split">
+            <article class="feature-panel highlight">
+              <div class="recommendation">Recommended first step</div>
+              <h3>Why compare Aceable packages?</h3>
+              <p>
+                Aceable Agent is built for the way people actually study now: online, self-paced, and available from
+                your computer, tablet, or phone. When you click through, Aceable will show its current Florida course
+                package options, pricing, package details, and Enroll Now buttons.
+              </p>
+
+              <ul class="proof-list">
+                <li>Online and self-paced, so students can work through the licensing course on their own schedule.</li>
+                <li>A modern course platform with package options students can compare before enrolling.</li>
+                <li>A strong first step before adding Florida-specific FastPass exam prep with code FastPass40.</li>
+              </ul>
+
+              <div class="product-note">
+                Course provided by Aceable Agent. Go Real Estate License is an Aceable Agent affiliate partner.
+              </div>
+
+              <div class="cta-row">
+                <a class="btn btn-primary" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Course Packages</a>
+              </div>
+            </article>
+
+            <article class="feature-panel">
+              <div class="recommendation">Best upgrade when you want support</div>
+              <h3>Why upgrade to FastPass?</h3>
+              <p>
+                Aceable gives you the course platform. FastPass adds Florida-focused exam prep and instructor support
+                for students who want a clearer plan before the state exam. Use code FastPass40 for $40 off FastPass exam prep.
+              </p>
+
+              <ul class="proof-list">
+                <li>Use Aceable for the required course, then add focused Florida exam prep when you are ready to pass.</li>
+                <li>Get local Florida context instead of generic national-only review.</li>
+                <li>Stack the Aceable course path with Florida-specific FastPass support using FastPass40.</li>
+              </ul>
+
+              <div class="product-note">
+                FastPass exam prep is additional support for students who want more focused help preparing for the Florida state exam. Instructor support is available at 239.471.8500 and provided through Daniel Larson Training.
+              </div>
+
+              <div class="cta-row">
+                <a class="btn btn-secondary" href="/fastpass">View FastPass</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="band" style="margin-top: 22px;">
+            <div class="section-title">
+              <h2>The value stack</h2>
+              <p>
+                The idea is simple: use Aceable for the required online licensing course, then add FastPass for the
+                Florida exam-prep layer students often want before test day.
+              </p>
+            </div>
+
+            <div class="value-stack">
+              <div class="stack-card">
+                <strong>1. Licensing course</strong>
+                <p>Start with Aceable Agent for the Florida licensing course path.</p>
+              </div>
+
+              <div class="stack-plus">+</div>
+
+              <div class="stack-card">
+                <strong>2. Florida exam prep</strong>
+                <p>Add FastPass for Florida-specific exam prep and instructor support.</p>
+                <div class="coupon">FastPass40 = $40 off</div>
+              </div>
+
+              <div class="stack-plus">=</div>
+
+              <div class="stack-card">
+                <strong>3. Cleaner path to exam day</strong>
+                <p>Modern online course access plus Florida-focused review, practice, and plain-English support.</p>
+              </div>
+            </div>
+
+            <p class="subtle-warning">
+              FastPass40 gives students $40 off FastPass exam prep. Regular price is $140. Final price with code: $100. FastPass is optional exam prep and does not replace the required pre-license course.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Aceable Packages</a>
+              <a class="btn btn-secondary" href="/fastpass">View FastPass</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="aceable-handoff">
+        <div class="container bridge-grid">
+          <article class="bridge-card">
+            <div class="recommendation">Before you click</div>
+            <h3>What you will see on Aceable</h3>
+            <p>
+              When you click to Aceable, you may see current course package options, pricing, payment options,
+              package details, and Enroll Now buttons. Aceable controls its own packages and promotions, so review the current details before enrolling.
+            </p>
+
+            <ol class="numbered-list">
+              <li>Compare the current Florida course package options on Aceable.</li>
+              <li>Choose the course package that fits how much support you want inside the course platform.</li>
+              <li>Enroll online through Aceable.</li>
+              <li>Then add FastPass exam prep with code FastPass40 if you want Florida-focused exam prep and instructor support.</li>
+            </ol>
+          </article>
+
+          <article class="bridge-card">
+            <div class="recommendation">Why this route makes sense</div>
+            <h3>Course platform + Florida exam prep</h3>
+            <p>
+              Aceable is the online course platform. FastPass is the Florida-focused exam-prep upgrade.
+              Together, they create a cleaner path than trying to piece everything together after you are already stressed about the exam.
+            </p>
+
+            <ul class="proof-list">
+              <li>Aceable handles the required online course experience.</li>
+              <li>FastPass adds Florida-specific review, practice, plain-English explanations, and instructor support.</li>
+              <li>The code gives students $40 off FastPass exam prep.</li>
+              <li>You stay online, flexible, and focused instead of waiting around for a classroom schedule.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="fastpass-handoff">
+        <div class="container">
+          <div class="band">
+            <div class="section-title">
+              <h2>What happens when you add FastPass?</h2>
+              <p>
+                FastPass details are handled on the Go Real Estate License FastPass page first, then checkout is handled through the course portal.
+              </p>
+            </div>
+
+            <div class="comparison">
+              <article class="comparison-card">
+                <h3>1. Review the FastPass bundle</h3>
+                <p>The FastPass page explains the FastPass exam-prep bundle, instructor support, and how to use FastPass40.</p>
+              </article>
+
+              <article class="comparison-card good">
+                <h3>2. Use the coupon at checkout</h3>
+                <p>Regular price is $140. Use <strong>FastPass40</strong> for <strong>$40 off</strong>. Final price with code: <strong>$100</strong>.</p>
+              </article>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="/fastpass">View FastPass</a>
+              <a class="btn btn-secondary" href="tel:12394718500">Instructor support: 239.471.8500</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="classroom">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-title">
+              <h2>Why many students choose the online route.</h2>
+              <p>
+                Classroom courses can work for some students. But many new license applicants prefer to start faster,
+                avoid fixed class times, and keep the process flexible while they work through the licensing steps.
+              </p>
+            </div>
+          </div>
+
+          <div class="comparison">
+            <article class="comparison-card">
+              <h3>The traditional classroom route</h3>
+              <p>
+                Fixed schedules, commute time, slower start dates, and less flexibility if work, family, or life gets in the way.
+              </p>
+            </article>
+
+            <article class="comparison-card good">
+              <h3>The modern online route</h3>
+              <p>
+                Start with an online course, move at your own pace, compare Aceable package options, and add FastPass
+                exam prep when you want a Florida-focused review layer before exam day.
+              </p>
+            </article>
+          </div>
+
+          <p class="subtle-warning">
+            The goal is not to make the licensing process complicated. The goal is to start clean, stay flexible,
+            and know where to get more help before the state exam becomes the problem.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div class="section-title">
+              <h2>Florida real estate terms, explained simply</h2>
+              <p>Quick definitions for the words students see before, during, and after enrollment.</p>
+            </div>
+          </div>
+
+          <div class="definition-grid terms-grid">
+            <div class="definition">
+              <b>Licensing course</b>
+              <p>The required Florida pre-license education course for sales associate applicants. In Florida, this course is 63 hours.</p>
+            </div>
+
+            <div class="definition">
+              <b>DBPR</b>
+              <p>The Florida Department of Business and Professional Regulation, which handles license applications.</p>
+            </div>
+
+            <div class="definition">
+              <b>State exam</b>
+              <p>The licensing exam you must pass before your license can move forward.</p>
+            </div>
+
+            <div class="definition">
+              <b>License activation</b>
+              <p>The process of placing your license with a Florida real estate broker so you can work.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="post-ce">
+        <div class="container">
+          <div class="band">
+            <h2>Post-Licensing vs. CE</h2>
+            <p>
+              Your first renewal is different from later renewals. Florida sales associates generally complete post-licensing first, then regular continuing education in later renewal cycles.
+            </p>
+
+            <div class="split" style="margin-top: 24px;">
+              <article class="card">
+                <div class="card-icon">45HR</div>
+                <h3>First renewal: post-licensing</h3>
+                <p>Florida sales associates generally need post-license education before the first renewal.</p>
+                <a class="btn-text" href="http://go.aceableagent.com/aff_c?offer_id=519&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Post-licensing explained →</a>
+              </article>
+
+              <article class="card">
+                <div class="card-icon">14HR</div>
+                <h3>Later renewals: continuing education</h3>
+                <p>After the first renewal cycle, Florida real estate licensees generally complete regular continuing education.</p>
+                <a class="btn-text" href="http://go.aceableagent.com/aff_c?offer_id=66&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Continuing education explained →</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-title">
+              <h2>Common Florida real estate license questions</h2>
+              <p>Short answers for the questions people usually search before they start.</p>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <details>
+              <summary>What course do I need to get a Florida real estate license?</summary>
+              <p>Most new Florida sales associate applicants need a Florida-approved pre-license course before sitting for the state exam. In Florida, that course is 63 hours.</p>
+            </details>
+
+            <details>
+              <summary>Can I take the Florida real estate course online?</summary>
+              <p>Yes. Online options are available through approved course providers. This site recommends Aceable Agent for students who want a modern, flexible, self-paced online course experience.</p>
+            </details>
+
+            <details>
+              <summary>Is the course the same as exam prep?</summary>
+              <p>No. The course is the required education. Exam prep is additional study help designed to prepare you for the state exam. That is why the recommended path is Aceable Agent for the course, then FastPass if you want Florida-focused exam prep support.</p>
+            </details>
+
+            <details>
+              <summary>Do I need to apply before taking the exam?</summary>
+              <p>You need to meet the state’s application and approval requirements before scheduling or sitting for the state exam.</p>
+            </details>
+
+            <details>
+              <summary>What happens after I pass?</summary>
+              <p>You generally need to activate your license with a Florida real estate broker before performing licensed real estate services.</p>
+            </details>
+
+            <details>
+              <summary>What is FastPass40?</summary>
+              <p>FastPass40 is the code for $40 off FastPass exam prep. Regular price is $140. Final price with code: $100.</p>
+            </details>
+
+            <details>
+              <summary>What is the difference between post-licensing and CE?</summary>
+              <p>Post-licensing applies to your first renewal after initial licensure. Continuing education applies to later regular renewals.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-title">
+              <h2>Official sources and disclosure</h2>
+              <p>Requirements can change. Use the official links below to confirm current DBPR, Pearson VUE, and renewal information.</p>
+            </div>
+          </div>
+
+          <div class="source-box">
+            <p>
+              <strong>Official source:</strong>
+              DBPR states that Florida sales associate applicants must show proof of completion of a Florida-approved 63-hour pre-license course before sitting for the state exam, and that the course is valid for two years.
+              <a href="https://www.myfloridalicense.com/CheckListDetail.asp?SID=&XACT_DEFN_ID=744&clientCode=2501&xactCode=1010" target="_blank" rel="noopener">View DBPR sales associate application information</a>.
+            </p>
+
+            <p>
+              <strong>Exam source:</strong>
+              Pearson VUE provides Florida Real Estate &amp; Appraisers licensing exam information for DBPR candidates.
+              <a href="https://www.pearsonvue.com/us/en/fl/realestate.html" target="_blank" rel="noopener">View Pearson VUE Florida real estate exam information</a>.
+            </p>
+
+            <p>
+              <strong>Renewal source:</strong>
+              DBPR/FREC materials explain post-license education and continuing education requirements for Florida real estate licensees.
+              <a href="https://www2.myfloridalicense.com/real-estate-commission/licensure-information/" target="_blank" rel="noopener">View DBPR/FREC licensure information</a>.
+            </p>
+
+            <p>
+              <strong>Est. 2020:</strong>
+              Go Real Estate License helps students understand the Florida licensing path and connects students with online course and exam-prep options.
+            </p>
+
+            <p>
+              <strong>Partner relationship:</strong>
+              Go Real Estate License is an Aceable Agent affiliate partner. FastPass exam prep and instructor support are provided through Daniel Larson Training.
+            </p>
+
+            <p>
+              <strong>Government disclaimer:</strong>
+              Go Real Estate License is not a government agency and is not affiliated with DBPR, FREC, Pearson VUE, or the State of Florida.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="band">
+            <h2>Ready to start?</h2>
+            <p>
+              Start with the Florida licensing course through Aceable. Then view FastPass when you want Florida-focused exam prep and instructor support before exam day.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="http://go.aceableagent.com/aff_c?offer_id=55&aff_id=12378" rel="sponsored noopener noreferrer" target="_blank">Compare Course Packages</a>
+              <a class="btn btn-secondary" href="/fastpass">View FastPass</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="#top">
+              <span class="brand-mark">GO</span>
+              <span class="brand-text">
+                Go Real Estate License
+                <span>Florida licensing guide</span>
+              </span>
+            </a>
+            <p>
+              Florida real estate licensing explained clearly. Go Real Estate License helps students understand the licensing
+              process and connect with online course and exam prep options.
+            </p>
+          </div>
+
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#start">Start Here</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#course">Licensing Course</a>
+            <a href="#exam-prep">FastPass</a>
+            <a href="#post-ce">Post &amp; CE</a>
+            <a href="#faq">FAQ</a>
+            <a href="#sources">Disclosure</a>
+            <a href="tel:12394718500">Instructor Support</a>
+            <a href="mailto:daniel@daniellarsontraining.com">Contact</a>
+          </nav>
+        </div>
+
+        <div class="fine-print">
+          Go Real Estate License is Est. 2020. Go Real Estate License is an Aceable Agent affiliate partner.
+          Aceable Agent provides the online course platform. FastPass exam prep and instructor support are provided through Daniel Larson Training.
+          Go Real Estate License is not a government agency and is not affiliated with DBPR, FREC, Pearson VUE, or the State of Florida.
+          FastPass instructor support is for exam-prep questions and next-step guidance, not official DBPR, Pearson VUE, or Aceable technical support. Last reviewed: June 26, 2026.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menuButton = document.querySelector(".menu-btn");
+    const mobilePanel = document.querySelector("#mobile-panel");
+
+    if (menuButton && mobilePanel) {
+      menuButton.addEventListener("click", () => {
+        const isOpen = mobilePanel.classList.toggle("is-open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      mobilePanel.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobilePanel.classList.remove("is-open");
+          menuButton.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (event) => {
+        const id = anchor.getAttribute("href");
+        if (!id || id === "#") return;
+
+        const target = document.querySelector(id);
+        if (!target) return;
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  </script>
+</body>
+</html>
